@@ -1,0 +1,104 @@
+@import "../config";
+
+
+
+
+.navbar {
+  width: 100%;
+  list-style-type: none;
+  overflow: hidden;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.navbar_li {
+  float: left;
+}
+
+.navbar_li .navbar_a {
+  display: block;
+  color: $white_font;
+  text-align: center;
+  text-decoration: none;
+  padding: 40px 16px;
+}
+
+.navbar_a:hover {
+  background-color: #111;
+}
+
+.navbar_links {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+}
+
+.navbar_logo {
+  width: 40px;
+  height: 40px;
+  margin-left: 20px;
+}
+
+
+
+
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content_header {
+  margin-top: 100px;
+  text-transform: uppercase;
+  color: $white_font;
+}
+
+.tech_grid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 50px;
+  width: 450px;;
+}
+
+.tech {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  background-color: pink;
+  margin: 20px 20px;
+}
+
+
+@media only screen and (max-width: 460px) {
+  body {
+    background-color: $background_color_mobile;
+  }
+  .tech_grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+}
+
+@media only screen and (min-width: 461px) and (max-width: 959px) {
+  body {
+    background-color: $background_color_tablet;
+  }
+}
+
+
+@media only screen and (min-width: 960px) {
+  .page_wrapper {
+    width: 80%;
+    margin: 0 auto;
+  }
+  body {
+    background-color: $background_color_desktop;
+  }
+}
